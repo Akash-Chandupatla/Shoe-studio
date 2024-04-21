@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shoe studio</title>
+  </head>
+  <body>
+    <div></div>
+    <img src="./assets/1.1.png" alt="Nike Air force" />
+  </body>
+</html>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    height: 100vh;
+    background-image: url(./assets/3.png);
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: back 6s infinite alternate-reverse;
+  }
+
+  div {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    /* background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c); */
+    background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+    position: absolute;
+    justify-self: center;
+    z-index: -1;
+    animation: rotate infinite;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+  }
+
+  body img {
+    width: 500px;
+    height: 500px;
+    /* animation: floating 3s infinite ease-in-out; */
+    animation: falling-down 4s ease-in-out;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  @keyframes floating {
+    0% {
+      transform: translateY(20px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(20px);
+    }
+  }
+
+  @keyframes back {
+    0% {
+      background: #222;
+      background-image: url(./assets/3.png);
+      background-size: cover;
+    }
+
+    100% {
+      background: #fff;
+      background-image: url(./assets/3.png);
+      background-size: cover;
+    }
+  }
+
+  @keyframes falling-down{
+    0%{
+        transform: translateY(-500%);
+    }
+
+    40%{
+        transform: translateY(0%);
+    }
+
+    60%{
+        transform: translateY(30px);
+    }
+
+    80%{
+        transform: translateY(0%);
+    }
+
+    100%{
+        transform: translateY(-30px);
+    }
+
+  }
+</style>
